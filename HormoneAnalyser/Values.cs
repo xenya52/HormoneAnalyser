@@ -56,5 +56,43 @@ namespace HormoneAnalyser
             "RDW", //42
             "THRO" //43
         };
+        int TSH { get; set; } // For every worth
+        int FT3 { get; set; }
+        int FT4 { get; set; }
+        int TAK { get; set; }
+        int TRAK { get; set; }
+        int Prolaktin { get; set; }
+        int LH { get; set; }
+        int FSH { get; set; }
+        int Estradiol { get; set; }
+        int Testosteron { get; set; }
+        int Progesteron { get; set; }
+        int Androstendion { get; set; }
+        int _17OHProgesteron { get; set; }
+        int AndroGluc { get; set; }
+        int ACTH { get; set; }
+        int Cortisol { get; set; }
+        int DHEAS { get; set; }
+        int STH { get; set; }
+        int IGF1 { get; set; }
+        int C_Peptid { get; set; }
+        int HbA1c { get; set; }
+        int BZppRgbg { get; set; }
+        int CRP { get; set; }
+        int CALS { get; set; }
+        int CKDM1 { get; set; }
+        int KREA { get; set; }
+        int GOT { get; set; }
+        int GPT { get; set; }
+        int PHOS { get; set; }
+        int ERY { get; set; }
+        int HB { get; set; }
+        int HBE { get; set; }
+        int HK { get; set; }
+        int LEUK { get; set; }
+        int MCHC { get; set; }
+        int MCV { get; set; }
+        int RDW { get; set; }
+        int THRO { get; set; }
     }
 }
