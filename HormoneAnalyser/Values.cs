@@ -56,43 +56,50 @@ namespace HormoneAnalyser
             "RDW", //42
             "THRO" //43
         };
-        int TSH { get; set; } // For every worth
-        int FT3 { get; set; }
-        int FT4 { get; set; }
-        int TAK { get; set; }
-        int TRAK { get; set; }
-        int Prolaktin { get; set; }
-        int LH { get; set; }
-        int FSH { get; set; }
-        int Estradiol { get; set; }
-        int Testosteron { get; set; }
-        int Progesteron { get; set; }
-        int Androstendion { get; set; }
-        int _17OHProgesteron { get; set; }
-        int AndroGluc { get; set; }
-        int ACTH { get; set; }
-        int Cortisol { get; set; }
-        int DHEAS { get; set; }
-        int STH { get; set; }
-        int IGF1 { get; set; }
-        int C_Peptid { get; set; }
-        int HbA1c { get; set; }
-        int BZppRgbg { get; set; }
-        int CRP { get; set; }
-        int CALS { get; set; }
-        int CKDM1 { get; set; }
-        int KREA { get; set; }
-        int GOT { get; set; }
-        int GPT { get; set; }
-        int PHOS { get; set; }
-        int ERY { get; set; }
-        int HB { get; set; }
-        int HBE { get; set; }
-        int HK { get; set; }
-        int LEUK { get; set; }
-        int MCHC { get; set; }
-        int MCV { get; set; }
-        int RDW { get; set; }
-        int THRO { get; set; }
+        public int TSH { get; set; } // For every worth
+        public int FT3 { get; set; }
+        public int FT4 { get; set; }
+        public int TAK { get; set; }
+        public int TRAK { get; set; }
+        public int Prolaktin { get; set; }
+        public int LH { get; set; }
+        public int FSH { get; set; }
+        public int Estradiol { get; set; }
+        public int Testosteron { get; set; }
+        public int SHBG { get; set; }
+        public int FAI { get; set; }
+        public int Progesteron { get; set; }
+        public int Androstendion { get; set; }
+        public int DTES17OH { get; set; }
+        public int _17OHProgesteron { get; set; }
+        public int AndroGluc { get; set; }
+        public int ACTH { get; set; }
+        public int Cortisol { get; set; }
+        public int DHEAS { get; set; }
+        public int STH { get; set; }
+        public int IGF1 { get; set; }
+        public int CPeptid { get; set; }
+        public int C_Peptid { get; set; }
+        public int HbA1c { get; set; }
+        public int BZppRgbg { get; set; }
+        public int PTH { get; set; }
+        public int CRP { get; set; }
+        public int CALS { get; set; }
+        public int CAPH { get; set; }
+        public int CKDM1 { get; set; }
+        public int KREA { get; set; }
+        public int GOT { get; set; }
+        public int GPT { get; set; }
+        public int GGT { get; set; }
+        public int PHOS { get; set; }
+        public int ERY { get; set; }
+        public int HB { get; set; }
+        public int HBE { get; set; }
+        public int HK { get; set; }
+        public int LEUK { get; set; }
+        public int MCHC { get; set; }
+        public int MCV { get; set; }
+        public int RDW { get; set; }
+        public int THRO { get; set; }
     }
 }

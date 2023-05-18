@@ -11,13 +11,14 @@ using System.IO; //You need to add this too
 using ServiceStack.Text;
 
 namespace HormoneAnalyser;
-
+/*
 class jsonValueReader
 {
-        /*ToReadAJsonData*/
+        ToReadAJsonData
     public static Config ConfigReader (string path)
     {
         string json = File.ReadAllText(path);
         return JsonSerializer.Deserialize<Config>(json);
     }
 }
+*/
