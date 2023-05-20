@@ -55,14 +55,12 @@ class program
         testValueSave.MCV = 666;
         testValueSave.RDW = 666;
         testValueSave.THRO = 666;
-
-
-
+        JsonToFile(testValueSave, "testHormoneValue1.json");
     }
-    public static void JsonToFile(object Object, string path)
+    public static void JsonToFile(object Object, string path) //Converts into a file
     {
         JsonSerializerOptions options = new JsonSerializerOptions();
-        options.WriteIndented = true;
+        options.WriteIndented = true; //made pretty printing on
         string json = JsonSerializer.Serialize(Object, typeof(Object), options);
         File.WriteAllText(path, json); // Path: C:\Users\Xenmi\Desktop\Software\C# Json\Json\Json\bin\Debug\net6.0
     }
