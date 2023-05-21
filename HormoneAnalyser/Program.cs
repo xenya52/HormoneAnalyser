@@ -10,6 +10,30 @@ class program
 {
     public static void Main(string[] args)
     {
+        Values valuesToLowTsgMtF = new(); //ng/ml
+        valuesToLowTsgMtF.TSH = 0.3;
+        valuesToLowTsgMtF.FT3 = 3.3;
+        valuesToLowTsgMtF.FT4 = 0.72;
+        valuesToLowTsgMtF.TAK = 0;
+        valuesToLowTsgMtF.TRAK = 0; //Eig. Pronzent
+        valuesToLowTsgMtF.Prolaktin = 3.8;
+        valuesToLowTsgMtF.LH = 0; //Testoproduktion
+        valuesToLowTsgMtF.FSH = 0;
+        valuesToLowTsgMtF.Estradiol = 99;
+        valuesToLowTsgMtF.Testosteron = 0.14;
+
+        Values valuesToHighTsgMtF = new(); //ng/ml
+        valuesToHighTsgMtF.TSH = 4.1;
+        valuesToHighTsgMtF.FT3 = 7.3;
+        valuesToHighTsgMtF.FT4 = 1.95;
+        valuesToHighTsgMtF.TAK = 100;
+        valuesToHighTsgMtF.TRAK = 1.76; //Eig. Pronzent
+        valuesToHighTsgMtF.Prolaktin = 23.2;
+        valuesToHighTsgMtF.LH = 0.5; //Testoproduktion
+        valuesToHighTsgMtF.FSH = 0.5;
+        valuesToHighTsgMtF.Estradiol = 201;
+        valuesToHighTsgMtF.Testosteron = 0.61;
+
         Values testValueSave = new();
         testValueSave.TSH = 666;
         testValueSave.FT3 = 666;
