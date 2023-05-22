@@ -21,6 +21,9 @@ class program
         valuesToLowTsgMtF.FSH = 0;
         valuesToLowTsgMtF.Estradiol = 99;
         valuesToLowTsgMtF.Testosteron = 0.14;
+        valuesToLowTsgMtF.SHBG = 18; //nmol/l
+        valuesToLowTsgMtF.FAI = 5.1;
+        valuesToLowTsgMtF.Progesteron = 0.9;
 
         Values valuesToHighTsgMtF = new(); //ng/ml
         valuesToHighTsgMtF.TSH = 4.1;
@@ -33,6 +36,9 @@ class program
         valuesToHighTsgMtF.FSH = 0.5;
         valuesToHighTsgMtF.Estradiol = 201;
         valuesToHighTsgMtF.Testosteron = 0.61;
+        valuesToHighTsgMtF.SHBG = 145; //nmol/l
+        valuesToHighTsgMtF.FAI = 7.3;
+        valuesToHighTsgMtF.Progesteron = 11;
 
         Values testValueSave = new();
         testValueSave.TSH = 666;
