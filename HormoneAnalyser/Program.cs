@@ -24,6 +24,16 @@ class program
         valuesToLowTsgMtF.SHBG = 18; //nmol/l
         valuesToLowTsgMtF.FAI = 5.1;
         valuesToLowTsgMtF.Progesteron = 0.9;
+        valuesToLowTsgMtF.Androstendion = 0.32; //µg/l
+        valuesToLowTsgMtF.DTES17OH = 14; //ng/dl
+        valuesToLowTsgMtF.AndroGluc = 0.21;
+        valuesToLowTsgMtF.ACTH = 0.9; //Von 7-10 Uhr
+        valuesToLowTsgMtF.Cortisol = 4; //µg/dL
+        valuesToLowTsgMtF.DHEAS = 29; //µg/dl
+        valuesToLowTsgMtF.STH = -1;
+        valuesToLowTsgMtF.IGF1 = 133; //22 - 24 Jahre ng/ml
+        valuesToLowTsgMtF.CPeptid = 1.4;
+        valuesToLowTsgMtF.HbA1c = 0.8; //Nanogramm pro mililieter
 
         Values valuesToHighTsgMtF = new(); //ng/ml
         valuesToHighTsgMtF.TSH = 4.1;
@@ -39,6 +49,16 @@ class program
         valuesToHighTsgMtF.SHBG = 145; //nmol/l
         valuesToHighTsgMtF.FAI = 7.3;
         valuesToHighTsgMtF.Progesteron = 11;
+        valuesToHighTsgMtF.Androstendion = 2.30; //µg/l
+        valuesToHighTsgMtF.DTES17OH = 71; //ng/dl
+        valuesToHighTsgMtF.AndroGluc = 4.65;
+        valuesToHighTsgMtF.ACTH = 61; //Von 7-10 Uhr
+        valuesToHighTsgMtF.Cortisol = 26; //µg/dL
+        valuesToHighTsgMtF.DHEAS = 431; //µg/dl
+        valuesToHighTsgMtF.STH = 9;
+        valuesToHighTsgMtF.IGF1 = 393; //22 - 24 Jahre ng/ml
+        valuesToHighTsgMtF.CPeptid = 4.1;
+        valuesToHighTsgMtF.HbA1c = 19.5; //Nanogramm pro mililieter
 
         Values testValueSave = new();
         testValueSave.TSH = 666;
@@ -56,8 +76,7 @@ class program
         testValueSave.Progesteron = 666;
         testValueSave.Androstendion = 666;
         testValueSave.DTES17OH = 666;
-        testValueSave.Progesteron = 666;
-        testValueSave.AndroGluc = 666;
+        testValueSave.AndroGluc = 666; //Androstandion-Glucuronid
         testValueSave.ACTH = 666;
         testValueSave.Cortisol = 666;
         testValueSave.DHEAS = 666;
