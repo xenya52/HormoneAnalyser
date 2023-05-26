@@ -3,6 +3,7 @@ using System.Data;
 using System.Text.Json;//You need to add this
 using System.IO; //You need to add this too
 using HormoneAnalyser;
+using System.Diagnostics.Metrics;
 
 namespace main;
 
@@ -34,6 +35,25 @@ class program
         valuesToLowTsgMtF.IGF1 = 133; //22 - 24 Jahre ng/ml
         valuesToLowTsgMtF.CPeptid = 1.4;
         valuesToLowTsgMtF.HbA1c = 0.8; //Nanogramm pro mililieter
+        valuesToLowTsgMtF.BZppRgbg = 0; //????????????????
+        valuesToLowTsgMtF.PTH = 1.1;
+        valuesToLowTsgMtF.CRP = -1; //ml/dl
+        valuesToLowTsgMtF.CALS = 2.08; //mmol
+        valuesToLowTsgMtF.CKDM1 = 0; //????????????
+        valuesToLowTsgMtF.KREA = 0.65;
+        valuesToLowTsgMtF.GOT = -1;
+        valuesToLowTsgMtF.GPT = -1;
+        valuesToLowTsgMtF.GGT = -1;
+        valuesToLowTsgMtF.PHOS = 8.83;
+        valuesToLowTsgMtF.ERY = 0; //???
+        valuesToLowTsgMtF.HB = 19.9; //g/dl
+        valuesToLowTsgMtF.HBE = 1;
+        valuesToLowTsgMtF.HK = 0; // ???
+        valuesToLowTsgMtF.LEUK = 50000; //μl
+        valuesToLowTsgMtF.MCHC = 31;
+        valuesToLowTsgMtF.MCV = 80; //fl
+        valuesToLowTsgMtF.RDW = 0; //fl
+        valuesToLowTsgMtF.THRO = 0; //???????????
 
         Values valuesToHighTsgMtF = new(); //ng/ml
         valuesToHighTsgMtF.TSH = 4.1;
@@ -59,6 +79,25 @@ class program
         valuesToHighTsgMtF.IGF1 = 393; //22 - 24 Jahre ng/ml
         valuesToHighTsgMtF.CPeptid = 4.1;
         valuesToHighTsgMtF.HbA1c = 19.5; //Nanogramm pro mililieter
+        valuesToHighTsgMtF.BZppRgbg = 0; //?????????
+        valuesToHighTsgMtF.PTH = 66.1;
+        valuesToHighTsgMtF.CRP = 0.5; //ml/dl
+        valuesToHighTsgMtF.CALS = 2.55; //mmol
+        valuesToHighTsgMtF.CKDM1 = 0; //??????????
+        valuesToHighTsgMtF.KREA = 1.10;
+        valuesToHighTsgMtF.GOT = 36;
+        valuesToHighTsgMtF.GPT = 36;
+        valuesToHighTsgMtF.GGT = 40;
+        valuesToHighTsgMtF.PHOS = 1.46;
+        valuesToHighTsgMtF.ERY = 0; //???
+        valuesToHighTsgMtF.HB = 15.6; //g/dl
+        valuesToHighTsgMtF.HBE = 1;
+        valuesToHighTsgMtF.HK = 0; // ???
+        valuesToHighTsgMtF.LEUK = 100000; //μl
+        valuesToHighTsgMtF.MCHC = 36;
+        valuesToHighTsgMtF.MCV = 96; //fl
+        valuesToHighTsgMtF.RDW = 98; //fl
+        valuesToHighTsgMtF.THRO = 0; //??????????
 
         Values testValueSave = new();
         testValueSave.TSH = 666;
