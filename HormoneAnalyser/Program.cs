@@ -53,7 +53,7 @@ class program
         valuesToLowTsgMtF.MCHC = 31;
         valuesToLowTsgMtF.MCV = 80; //fl
         valuesToLowTsgMtF.RDW = 0; //fl
-        valuesToLowTsgMtF.THRO = 0; //???????????
+        valuesToLowTsgMtF.THRO = 149999; //μl
 
         Values valuesToHighTsgMtF = new(); //ng/ml
         valuesToHighTsgMtF.TSH = 4.1;
@@ -97,7 +97,7 @@ class program
         valuesToHighTsgMtF.MCHC = 36;
         valuesToHighTsgMtF.MCV = 96; //fl
         valuesToHighTsgMtF.RDW = 98; //fl
-        valuesToHighTsgMtF.THRO = 0; //??????????
+        valuesToHighTsgMtF.THRO = 400000; //μl
 
         Values testValueSave = new();
         testValueSave.TSH = 666;
