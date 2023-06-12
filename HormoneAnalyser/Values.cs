@@ -19,6 +19,12 @@ internal class Values
         value.Add(new Value(name, description, userValue, valueToHigh, valueToLow));
         JsonToFile(this, "Hormonvalues.json");
     }
+    public void deleteAValue(int userInput)
+    {
+        value = ConfigReader("Hormonvalues.json").value;
+        value.Remove(value[userInput]);
+        JsonToFile(this, "Hormonvalues.json");
+    }
         
     /*ToReadTHEJsonData*/
     public Values ConfigReader(string path) //Reads a json file

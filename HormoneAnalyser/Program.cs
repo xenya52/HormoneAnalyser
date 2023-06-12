@@ -12,8 +12,11 @@ class program
     //https://hlcc.haj.gf/ converter
     public static void Main(string[] args)
     {
+        
         Values values = new Values();
-        Console.WriteLine("Valuename");
+        int userInput = Convert.ToInt32(Console.ReadLine());
+        values.deleteAValue(userInput);
+        /* Console.WriteLine("Valuename");
         string Name = Convert.ToString(Console.ReadLine());
         Console.WriteLine("ValueDescription");
         string Description = Convert.ToString(Console.ReadLine());
@@ -24,6 +27,6 @@ class program
         Console.WriteLine("ValueToLow");
         double ValueToLow = Convert.ToDouble(Console.ReadLine());
 
-        values.creatingAValue(Name, Description, UserValue, ValueToHigh, ValueToLow);
+        values.creatingAValue(Name, Description, UserValue, ValueToHigh, ValueToLow); */
     }
 }
