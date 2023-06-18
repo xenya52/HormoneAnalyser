@@ -13,10 +13,10 @@ internal class Values
 {
 
     public List<Value> value { get; set; } = new List<Value>();
-    public void creatingAValue(string name, string description, double userValue, double valueToHigh, double valueToLow)
+    public void creatingAValue(string name, string description, string unit, double userValue, double valueToLow, double valueToHigh)
     {
         value = ConfigReader("Hormonvalues.json").value;
-        value.Add(new Value(name, description, userValue, valueToHigh, valueToLow));
+        value.Add(new Value(name, description, unit, userValue, valueToLow, valueToHigh));
         JsonToFile(this, "Hormonvalues.json");
     }
     public void deleteAValue(int userInput)
@@ -24,6 +24,15 @@ internal class Values
         value = ConfigReader("Hormonvalues.json").value;
         value.Remove(value[userInput]);
         JsonToFile(this, "Hormonvalues.json");
+    }
+
+    public void ShowAllValue()
+    {
+        for (int i = 0; i < value.Count; i++)
+        {
+            value = ConfigReader("Hormonevalues.json").value;
+            Console.WriteLine(value[i]);
+        }
     }
         
     /*ToReadTHEJsonData*/
