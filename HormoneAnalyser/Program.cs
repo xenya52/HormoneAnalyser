@@ -14,7 +14,21 @@ class program
     {
         Values values = new Values();
 
-        Console.WriteLine("Valuename");
+        Console.WriteLine("Input1");
+        int input1 = Convert.ToInt32(Console.ReadLine());
+        Console.WriteLine("Input2");
+        int input2 = Convert.ToInt32(Console.ReadLine());
+        values.swapValues(input1, input2);
+
+        /* values.ShowAllValue();  */
+
+        /* Console.WriteLine("Write the number");
+        int input = Convert.ToInt32(Console.ReadLine());
+        values.deleteAValue(input); */
+
+
+
+        /*Console.WriteLine("Valuename");
         string Name = Convert.ToString(Console.ReadLine());
         Console.WriteLine("ValueDescription");
         string Description = Convert.ToString(Console.ReadLine());
@@ -27,6 +41,6 @@ class program
         Console.WriteLine("ValueToLow");
         double ValueToLow = Convert.ToDouble(Console.ReadLine());
 
-        values.creatingAValue(Name, Description, unit, UserValue, ValueToLow, ValueToHigh);
+        values.creatingAValue(Name, Description, unit, UserValue, ValueToLow, ValueToHigh);*/
     }
 }

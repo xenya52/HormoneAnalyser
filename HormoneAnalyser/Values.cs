@@ -2,7 +2,9 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
+using System.Data;
 using System.Linq;
+using System.Reflection.Metadata.Ecma335;
 using System.Text;
 using System.Text.Json;
 using System.Threading.Tasks;
@@ -12,11 +14,11 @@ namespace HormoneAnalyser;
 internal class Values
 {
 
-    public List<Value> value { get; set; } = new List<Value>();
+    public List<Value> value { get; set; } = new List<Value>(); //List goes on by 0
     public void creatingAValue(string name, string description, string unit, double userValue, double valueToLow, double valueToHigh)
     {
         value = ConfigReader("Hormonvalues.json").value;
-        value.Add(new Value(name, description, unit, userValue, valueToLow, valueToHigh));
+        value.Add(new Value( name, description, unit, userValue, valueToLow, valueToHigh));
         JsonToFile(this, "Hormonvalues.json");
     }
     public void deleteAValue(int userInput)
@@ -26,12 +28,36 @@ internal class Values
         JsonToFile(this, "Hormonvalues.json");
     }
 
+    public void swapValues(int input1, int input2)
+    {
+        value = ConfigReader("Hormonvalues.json").value;
+
+        var temp = value[input1];
+
+        value[input1] = value[input2];
+        value[input2] = temp;
+
+        JsonToFile(this, "Hormonvalues.json");
+    }
+
     public void ShowAllValue()
     {
-        for (int i = 0; i < value.Count; i++)
+        int count = 0;
+
+        value = ConfigReader("Hormonvalues.json").value;
+
+        foreach (var list in value)
         {
-            value = ConfigReader("Hormonevalues.json").value;
-            Console.WriteLine(value[i]);
+
+            Console.WriteLine("[" + count + "]");
+            Console.WriteLine("<ValueName    " + list.valueName);
+            Console.WriteLine("<Description  " + list.valueDescription);
+            Console.WriteLine("<UserValue    " + list.userValue + " " + list.unit);
+            Console.WriteLine("<To High      " + list.valueToHigh + " " + list.unit);
+            Console.WriteLine("<To Low       " + list.valueToLow + " " + list.unit);
+            Console.WriteLine();
+
+            count++;
         }
     }
         
