@@ -40,6 +40,47 @@ internal class Values
         JsonToFile(this, "Hormonvalues.json");
     }
 
+    public void ShowSpecificValue(int input1)
+    {
+
+        value = ConfigReader("Hormonvalues.json").value;
+
+        Console.WriteLine("[" + input1 + "]");
+        Console.WriteLine("<ValueName    " + value[input1].valueName);
+        Console.WriteLine("<Description  " + value[input1].valueDescription);
+        Console.WriteLine("<UserValue    " + value[input1].userValue + " " + value[input1].unit);
+        Console.WriteLine("<To High      " + value[input1].valueToHigh + " " + value[input1].unit);
+        Console.WriteLine("<To Low       " + value[input1].valueToLow + " " + value[input1].unit);
+        Console.WriteLine();
+    }
+
+    public void ShowSiteOfValue(int input)
+    {
+        int valueNumber = 0;
+        int site = input;
+
+        input *= 5;
+        int check = input - 5;
+
+        value = ConfigReader("Hormonvalues.json").value;
+
+        do
+        {
+            if (valueNumber < value.Count)
+            {
+                Console.WriteLine("[" + valueNumber + "]");
+                Console.WriteLine("<ValueName    " + value[valueNumber].valueName);
+                Console.WriteLine("<Description  " + value[valueNumber].valueDescription);
+                Console.WriteLine("<UserValue    " + value[valueNumber].userValue + " " + value[valueNumber].unit);
+                Console.WriteLine();
+            }
+
+            valueNumber++;
+        } while (input < check);
+
+        Console.WriteLine(site);
+    }
+
     public void ShowAllValue()
     {
         int count = 0;
@@ -60,7 +101,7 @@ internal class Values
             count++;
         }
     }
-        
+
     /*ToReadTHEJsonData*/
     public Values ConfigReader(string path) //Reads a json file
     {

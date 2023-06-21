@@ -14,15 +14,22 @@ class program
     {
         Values values = new Values();
 
-        Console.WriteLine("Input1");
+        Console.WriteLine("Write input1");
+        int input = Convert.ToInt32(Console.ReadLine());
+        values.ShowSiteOfValue(input);
+
+        /* Console.WriteLine("All values");
+        values.ShowAllValue(); */
+
+        /*Console.WriteLine("Input1");
         int input1 = Convert.ToInt32(Console.ReadLine());
         Console.WriteLine("Input2");
         int input2 = Convert.ToInt32(Console.ReadLine());
-        values.swapValues(input1, input2);
+        values.swapValues(input1, input2); */
 
         /* values.ShowAllValue();  */
 
-        /* Console.WriteLine("Write the number");
+        /*Console.WriteLine("Write the number");
         int input = Convert.ToInt32(Console.ReadLine());
         values.deleteAValue(input); */
 
