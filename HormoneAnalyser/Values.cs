@@ -56,10 +56,11 @@ internal class Values
 
     public void ShowSiteOfValue(int input)
     {
-        int valueNumber = 0;
         int site = input;
 
         input *= 5;
+
+        int valueNumber = input;
         int check = input - 5;
 
         value = ConfigReader("Hormonvalues.json").value;
@@ -75,8 +76,10 @@ internal class Values
                 Console.WriteLine();
             }
 
+            input--;
             valueNumber++;
-        } while (input < check);
+
+        } while (check < input);
 
         Console.WriteLine(site);
     }
