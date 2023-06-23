@@ -13,7 +13,7 @@ namespace HormoneAnalyser;
 
 internal class Values
 {
-
+    //Values
     public List<Value> value { get; set; } = new List<Value>(); //List goes on by 0
     public void creatingAValue(string name, string description, string unit, double userValue, double valueToLow, double valueToHigh)
     {
@@ -104,6 +104,9 @@ internal class Values
             count++;
         }
     }
+    //Categorys
+    public List<Category> category { get; set; } = new List<Category>();
+
 
     /*ToReadTHEJsonData*/
     public Values ConfigReader(string path) //Reads a json file

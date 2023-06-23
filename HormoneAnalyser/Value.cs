@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace HormoneAnalyser
 {
-    internal class Value
+    public class Value
     {
         public string valueName { get; set; }
         public string valueDescription { get; set; }
