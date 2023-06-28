@@ -14,28 +14,40 @@ namespace HormoneAnalyser;
 internal class Values
 {
     //Values
-    public List<Value> value { get; set; } = new List<Value>(); //List goes on by 0
+    public List<Value> valueList { get; set; } = new List<Value>(); //List goes on by 0
     public void creatingAValue(string name, string description, string unit, double userValue, double valueToLow, double valueToHigh)
     {
-        value = ConfigReader("Hormonvalues.json").value;
-        value.Add(new Value( name, description, unit, userValue, valueToLow, valueToHigh));
+        valueList = ConfigReader("Hormonvalues.json").valueList;
+
+        valueList.Add(new Value( name, description, unit, userValue, valueToLow, valueToHigh));
         JsonToFile(this, "Hormonvalues.json");
     }
+    public void editASpecificValue(int valueNumberInput, string valueTypeInput, string userValueChange)
+    {
+        valueList = ConfigReader("Hormonvalues.json").valueList;
+
+        valueList[valueNumberInput] = valueList.Find(valueTypeInput
+            => valueTypeInput.valueName.Contains(userValueChange));
+
+        JsonToFile(this, "Hormonvalues.json");
+    }
+
     public void deleteAValue(int userInput)
     {
-        value = ConfigReader("Hormonvalues.json").value;
-        value.Remove(value[userInput]);
+        valueList = ConfigReader("Hormonvalues.json").valueList;
+
+        valueList.Remove(valueList[userInput]);
         JsonToFile(this, "Hormonvalues.json");
     }
 
     public void swapValues(int input1, int input2)
     {
-        value = ConfigReader("Hormonvalues.json").value;
+        valueList = ConfigReader("Hormonvalues.json").valueList;
 
-        var temp = value[input1];
+        var temp = valueList[input1];
 
-        value[input1] = value[input2];
-        value[input2] = temp;
+        valueList[input1] = valueList[input2];
+        valueList[input2] = temp;
 
         JsonToFile(this, "Hormonvalues.json");
     }
@@ -43,14 +55,14 @@ internal class Values
     public void ShowSpecificValue(int input1)
     {
 
-        value = ConfigReader("Hormonvalues.json").value;
+        valueList = ConfigReader("Hormonvalues.json").valueList;
 
         Console.WriteLine("[" + input1 + "]");
-        Console.WriteLine("<ValueName    " + value[input1].valueName);
-        Console.WriteLine("<Description  " + value[input1].valueDescription);
-        Console.WriteLine("<UserValue    " + value[input1].userValue + " " + value[input1].unit);
-        Console.WriteLine("<To High      " + value[input1].valueToHigh + " " + value[input1].unit);
-        Console.WriteLine("<To Low       " + value[input1].valueToLow + " " + value[input1].unit);
+        Console.WriteLine("<ValueName    " + valueList[input1].valueName);
+        Console.WriteLine("<Description  " + valueList[input1].valueDescription);
+        Console.WriteLine("<UserValue    " + valueList[input1].userValue + " " + valueList[input1].unit);
+        Console.WriteLine("<To High      " + valueList[input1].valueToHigh + " " + valueList[input1].unit);
+        Console.WriteLine("<To Low       " + valueList[input1].valueToLow + " " + valueList[input1].unit);
         Console.WriteLine();
     }
 
@@ -63,16 +75,16 @@ internal class Values
         int valueNumber = input;
         int check = input - 5;
 
-        value = ConfigReader("Hormonvalues.json").value;
+        valueList = ConfigReader("Hormonvalues.json").valueList;
 
         do
         {
-            if (valueNumber < value.Count)
+            if (valueNumber < valueList.Count)
             {
                 Console.WriteLine("[" + valueNumber + "]");
-                Console.WriteLine("<ValueName    " + value[valueNumber].valueName);
-                Console.WriteLine("<Description  " + value[valueNumber].valueDescription);
-                Console.WriteLine("<UserValue    " + value[valueNumber].userValue + " " + value[valueNumber].unit);
+                Console.WriteLine("<ValueName    " + valueList[valueNumber].valueName);
+                Console.WriteLine("<Description  " + valueList[valueNumber].valueDescription);
+                Console.WriteLine("<UserValue    " + valueList[valueNumber].userValue + " " + valueList[valueNumber].unit);
                 Console.WriteLine();
             }
 
@@ -88,9 +100,9 @@ internal class Values
     {
         int count = 0;
 
-        value = ConfigReader("Hormonvalues.json").value;
+        valueList = ConfigReader("Hormonvalues.json").valueList;
 
-        foreach (var list in value)
+        foreach (var list in valueList)
         {
 
             Console.WriteLine("[" + count + "]");
@@ -123,6 +135,5 @@ internal class Values
         string json = JsonSerializer.Serialize(Object, typeof(Object), options);
         File.WriteAllText(path, json); // Path: C:\Users\Xenmi\Desktop\Software\C# Json\Json\Json\bin\Debug\net6.0
     }
-
 }
 
