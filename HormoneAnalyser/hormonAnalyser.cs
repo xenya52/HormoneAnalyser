@@ -11,7 +11,7 @@ using System.Threading.Tasks;
 
 namespace HormoneAnalyser;
 
-internal class Values
+internal class hormonAnalyser
 {
     //Values
     public List<Value> valueList { get; set; } = new List<Value>(); //List goes on by 0
@@ -21,15 +21,20 @@ internal class Values
 
         valueList.Add(new Value( name, description, unit, userValue, valueToLow, valueToHigh));
         JsonToFile(this, "Hormonvalues.json");
+
+        Console.ReadKey();
+        Console.Clear();
     }
     public void editASpecificValue(int valueNumberInput, string valueTypeInput, string userValueChange)
     {
         valueList = ConfigReader("Hormonvalues.json").valueList;
 
-        valueList[valueNumberInput] = valueList.Find(valueTypeInput
-            => valueTypeInput.valueName.Contains(userValueChange));
+        valueList[valueNumberInput] = valueList.Find(valueTypeInput => valueTypeInput.valueName.Contains(userValueChange));
 
         JsonToFile(this, "Hormonvalues.json");
+
+        Console.ReadKey();
+        Console.Clear();
     }
 
     public void deleteAValue(int userInput)
@@ -38,6 +43,9 @@ internal class Values
 
         valueList.Remove(valueList[userInput]);
         JsonToFile(this, "Hormonvalues.json");
+
+        Console.ReadKey();
+        Console.Clear();
     }
 
     public void swapValues(int input1, int input2)
@@ -50,6 +58,9 @@ internal class Values
         valueList[input2] = temp;
 
         JsonToFile(this, "Hormonvalues.json");
+
+        Console.ReadKey();
+        Console.Clear();
     }
 
     public void ShowSpecificValue(int input1)
@@ -64,6 +75,9 @@ internal class Values
         Console.WriteLine("<To High      " + valueList[input1].valueToHigh + " " + valueList[input1].unit);
         Console.WriteLine("<To Low       " + valueList[input1].valueToLow + " " + valueList[input1].unit);
         Console.WriteLine();
+
+        Console.ReadKey();
+        Console.Clear();
     }
 
     public void ShowSiteOfValue(int input)
@@ -94,6 +108,9 @@ internal class Values
         } while (check < input);
 
         Console.WriteLine(site);
+
+        Console.ReadKey();
+        Console.Clear();
     }
 
     public void ShowAllValue()
@@ -115,16 +132,17 @@ internal class Values
 
             count++;
         }
+        Console.ReadKey();
+        Console.Clear();
     }
     //Categorys
     public List<Category> category { get; set; } = new List<Category>();
 
-
     /*ToReadTHEJsonData*/
-    public Values ConfigReader(string path) //Reads a json file
+    public hormonAnalyser ConfigReader(string path) //Reads a json file
     {
         string json = File.ReadAllText(path);
-        return JsonSerializer.Deserialize<Values>(json);
+        return JsonSerializer.Deserialize<hormonAnalyser>(json);
     }
 
     /*ToSaveTheJsonData*/

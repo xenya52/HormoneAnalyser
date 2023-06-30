@@ -12,7 +12,7 @@ class program
     //https://hlcc.haj.gf/ converter
     public static void Main(string[] args)
     {
-        Values values = new Values();
+        hormonAnalyser values = new hormonAnalyser();
 
         Console.WriteLine("Write input1");
         int input = Convert.ToInt32(Console.ReadLine());
