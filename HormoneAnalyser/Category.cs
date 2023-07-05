@@ -11,11 +11,13 @@ namespace HormoneAnalyser
     {
         public string name { get; set; }
         public string description { get; set; }
+        public string categoryParts { get; set; }
 
-        public Value (string name, string description)
+        public Category (string name, string description, string categoryParts)
         {
             this.name = name;
             this.description = description;
+            this.categoryParts = categoryParts;
         }
     }
 }

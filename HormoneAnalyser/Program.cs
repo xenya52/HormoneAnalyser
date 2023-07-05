@@ -14,9 +14,11 @@ class program
     {
         hormonAnalyser values = new hormonAnalyser();
 
-        Console.WriteLine("Write input1");
-        int input = Convert.ToInt32(Console.ReadLine());
-        values.ShowSiteOfValue(input);
+        Console.WriteLine("Write name");
+        string input1 = Convert.ToString(Console.ReadLine());
+        Console.WriteLine("Write description");
+        string input2 = Convert.ToString(Console.ReadLine());
+        values.addCategory(input1, input2);
 
         /* Console.WriteLine("All values");
         values.ShowAllValue(); */

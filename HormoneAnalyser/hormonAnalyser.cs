@@ -136,7 +136,31 @@ internal class hormonAnalyser
         Console.Clear();
     }
     //Categorys
-    public List<Category> category { get; set; } = new List<Category>();
+    public List<Category> categoryList { get; set; } = new List<Category>();
+    public void addCategory(string name, string description)
+    {
+        valueList = ConfigReader("HormonValues.json").valueList;
+        categoryList = ConfigReader("HormonValues.json").categoryList;
+
+        categoryList.Add(new Category(name, description, "0"));
+
+        JsonToFile(this, "Hormonvalues.json");
+    }
+
+    public void addValueToCategory (int valueNumber, char categoryNumber)
+    {
+        valueList = ConfigReader("HormoneValues.json").valueList;
+        categoryList = ConfigReader("HormoneValues.json").categoryList;
+
+        categoryList[categoryNumber] = categoryList.Find(categoryList => categoryList.categoryParts.Contains(categoryNumber));
+    } // Nexst step is too make a Method, that shows a category with the spezific values
+
+
+
+    public void desrializeCategoryParts(int categoryNumber)
+    {
+
+    }
 
     /*ToReadTHEJsonData*/
     public hormonAnalyser ConfigReader(string path) //Reads a json file

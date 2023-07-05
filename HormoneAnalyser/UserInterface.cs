@@ -9,7 +9,7 @@ namespace HormoneAnalyser
 {
     internal class UserInterface : hormonAnalyser
     {
-        public void showAllOptionsPage(int input)
+        /*public void showAllOptionsPage(int input)
         {
             switch(input)
             {
@@ -31,6 +31,6 @@ namespace HormoneAnalyser
                 case 8: ShowAllValue();
                     break;
             }
-        }
+        } */
     }
 }
