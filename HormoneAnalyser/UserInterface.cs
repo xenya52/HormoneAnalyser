@@ -9,14 +9,30 @@ namespace HormoneAnalyser
 {
     internal class UserInterface : hormonAnalyser
     {
-        /*public void showAllOptionsPage(int input)
+        public void showAllOptionsPage1(int input)
         {
             switch(input)
             {
                 case 1:
-                    creatingAValue(); 
+                    Console.WriteLine(">Type the valueName");
+                    string valueName = Convert.ToString(Console.ReadLine());
+                    Console.WriteLine(">Type the valueDescription");
+                    string valueDescription = Convert.ToString(Console.ReadLine());
+                    Console.WriteLine("Type in, the unit from the value");
+                    string valueUnit = Convert.ToString(Console.ReadLine());
+                    Console.WriteLine(">Type you value");
+                    double youValue = Convert.ToDouble(Console.ReadLine());
+                    Console.WriteLine(">Type the highest value that is ok");
+                    double highestValue = Convert.ToDouble(Console.ReadLine());
+                    Console.WriteLine(">Type the lowest value that is ok");
+                    double lowestValue = Convert.ToDouble(Console.ReadLine());
+                    creatingAValue(valueName,valueDescription,valueUnit,youValue,lowestValue,highestValue); 
                     break;
-                case 2: editASpecificValue(); 
+                case 2:
+                    Console.WriteLine("Form what value number do you want to make you change?");
+                    Console.WriteLine("What value do you want to edit?");
+                    Console.WriteLine("What is the new value?");
+                    editASpecificValue(); 
                     break;
                 case 3: deleteAValue(); 
                     break;
@@ -31,6 +47,6 @@ namespace HormoneAnalyser
                 case 8: ShowAllValue();
                     break;
             }
-        } */
+        }
     }
 }
