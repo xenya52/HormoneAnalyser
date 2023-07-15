@@ -25,7 +25,7 @@ internal class hormonAnalyser
         Console.ReadKey();
         Console.Clear();
     }
-    public void editASpecificValue(int valueNumberInput, string valueTypeInput, string userValueChange)
+    public void editASpecificValue(int valueNumberInput, int valueTypeInput, double userValueChange)
     {
         valueList = ConfigReader("Hormonvalues.json").valueList;
 
