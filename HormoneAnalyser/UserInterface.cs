@@ -34,7 +34,7 @@ namespace HormoneAnalyser
                     Console.WriteLine("What value do you want to edit?");
                     int valueWhatIWantToChange = Convert.ToInt32(Console.ReadLine());
                     Console.WriteLine("What is the new value?");
-                    double theNewValue = Convert.ToDouble(Console.ReadLine());
+                    char theNewValue = Convert.ToChar(Console.ReadLine());
                     editASpecificValue(numberWhatIWantToChange,valueWhatIWantToChange,theNewValue); 
                     break;
                 case 3:
@@ -43,15 +43,28 @@ namespace HormoneAnalyser
                     int deleteValue = Convert.ToInt32(Console.ReadLine());
                     deleteAValue(deleteValue); 
                     break;
-                case 4: swapValues(); 
+                case 4:
+                    Console.WriteLine("Write the first valueNumber what you want to swap");
+                    int valueNumberA = Convert.ToInt32(Console.ReadLine());
+                    Console.WriteLine("Now write the second valueNumber");
+                    int valueNumberB = Convert.ToInt32(Console.ReadLine());
+                    swapValues(valueNumberA,valueNumberB); 
                     break;
-                case 5: ShowSpecificValue();
+                case 5:
+                    Console.WriteLine("Type in the valueNumber, what you want to see");
+                    int valueNumber = Convert.ToInt32(Console.ReadLine());
+                    ShowSpecificValue(valueNumber);
                     break;
-                case 6: ShowSpecificValue();
+                case 6:
+                    int navigator = 0;
+                    do
+                    {
+                        ShowSiteOfValue(navigator); //In work
+                        Console.WriteLine("Go back? Type [99] in");
+
+                    } while(navigator == 99);
                     break;
-                case 7: ShowSiteOfValue();
-                    break;
-                case 8: ShowAllValue();
+                case 7: ShowAllValue();
                     break;
             }
         }
