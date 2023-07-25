@@ -29,40 +29,42 @@ namespace HormoneAnalyser
                     creatingAValue(valueName,valueDescription,valueUnit,youValue,lowestValue,highestValue); 
                     break;
                 case 2:
-                    Console.WriteLine("Form what value number do you want to make you change?");
+                    Console.WriteLine(">Form what value number do you want to make you change?");
                     int numberWhatIWantToChange = Convert.ToInt32(Console.ReadLine());
-                    Console.WriteLine("What value do you want to edit?");
+                    Console.WriteLine(">What value do you want to edit?");
                     int valueWhatIWantToChange = Convert.ToInt32(Console.ReadLine());
-                    Console.WriteLine("What is the new value?");
+                    Console.WriteLine(">What is the new value?");
                     char theNewValue = Convert.ToChar(Console.ReadLine());
                     editASpecificValue(numberWhatIWantToChange,valueWhatIWantToChange,theNewValue); 
                     break;
                 case 3:
                     ShowAllValue();
-                    Console.WriteLine("Write in the value number what you want to delete");
+                    Console.WriteLine(">Write in the value number what you want to delete");
                     int deleteValue = Convert.ToInt32(Console.ReadLine());
                     deleteAValue(deleteValue); 
                     break;
                 case 4:
-                    Console.WriteLine("Write the first valueNumber what you want to swap");
+                    Console.WriteLine(">Write the first valueNumber what you want to swap");
                     int valueNumberA = Convert.ToInt32(Console.ReadLine());
-                    Console.WriteLine("Now write the second valueNumber");
+                    Console.WriteLine(">Now write the second valueNumber");
                     int valueNumberB = Convert.ToInt32(Console.ReadLine());
                     swapValues(valueNumberA,valueNumberB); 
                     break;
                 case 5:
-                    Console.WriteLine("Type in the valueNumber, what you want to see");
+                    Console.WriteLine(">Type in the valueNumber, what you want to see");
                     int valueNumber = Convert.ToInt32(Console.ReadLine());
                     ShowSpecificValue(valueNumber);
                     break;
                 case 6:
-                    int navigator = 0;
-                    do
+                    int siteInput = 0;
+                    while (Console.ReadKey().Key != ConsoleKey.Enter) 
                     {
-                        ShowSiteOfValue(navigator); //In work
-                        Console.WriteLine("Go back? Type [99] in");
+                        ShowSiteOfValue(siteInput);
+                        Console.WriteLine("[<-] Backwards    Forward [->]");
 
-                    } while(navigator == 99);
+                        Console.WriteLine("Write a specific siteNumber and press <Enter> to search");
+                        Console.WriteLine("Press only <Enter> to quit");
+                    }
                     break;
                 case 7: ShowAllValue();
                     break;
