@@ -60,10 +60,12 @@ namespace HormoneAnalyser
                     while (Console.ReadKey().Key != ConsoleKey.Enter) 
                     {
                         ShowSiteOfValue(siteInput);
-                        Console.WriteLine("[<-] Backwards    Forward [->]");
 
-                        Console.WriteLine("Write a specific siteNumber and press <Enter> to search");
+                        Console.WriteLine("[<-] Backwards    Forward [->]");
+                        Console.WriteLine("Write a specific siteNumber");
                         Console.WriteLine("Press only <Enter> to quit");
+
+                        siteInput = Convert.ToInt32(Console.ReadKey());
                     }
                     break;
                 case 7: ShowAllValue();

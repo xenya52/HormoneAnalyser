@@ -100,7 +100,6 @@ internal class hormonAnalyser
                 Console.WriteLine("<ValueName    " + valueList[valueNumber].valueName);
                 Console.WriteLine("<Description  " + valueList[valueNumber].valueDescription);
                 Console.WriteLine("<UserValue    " + valueList[valueNumber].userValue + " " + valueList[valueNumber].unit);
-                Console.WriteLine();
             }
 
             input--;
@@ -109,6 +108,7 @@ internal class hormonAnalyser
         } while (check < input);
 
         Console.WriteLine(site);
+        Console.WriteLine();
 
         Console.ReadKey();
         Console.Clear();
